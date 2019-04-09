@@ -5,15 +5,19 @@
   
 
   
-  <title>Welcome To my Blog</title>
+  <title>Vue相关 | Welcome To my Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Welcome To my Blog">
-<meta property="og:url" content="http://yoursite.com/index.html">
+  <meta name="description" content="Vue的生命周期它可以总共分为8个阶段： beforeCreate（创建前）, created（创建后）, beforeMount(载入前), mounted（载入后）, beforeUpdate（更新前）, updated（更新后）, beforeDestroy（销毁前）, destroyed（销毁后） Vue的响应式原理当一个Vue实例创建时，vue会遍历data选项的属性，用 Object.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Vue相关">
+<meta property="og:url" content="http://yoursite.com/2019/04/09/Vue相关/index.html">
 <meta property="og:site_name" content="Welcome To my Blog">
+<meta property="og:description" content="Vue的生命周期它可以总共分为8个阶段： beforeCreate（创建前）, created（创建后）, beforeMount(载入前), mounted（载入后）, beforeUpdate（更新前）, updated（更新后）, beforeDestroy（销毁前）, destroyed（销毁后） Vue的响应式原理当一个Vue实例创建时，vue会遍历data选项的属性，用 Object.">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-04-09T03:39:40.283Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Welcome To my Blog">
+<meta name="twitter:title" content="Vue相关">
+<meta name="twitter:description" content="Vue的生命周期它可以总共分为8个阶段： beforeCreate（创建前）, created（创建后）, beforeMount(载入前), mounted（载入后）, beforeUpdate（更新前）, updated（更新后）, beforeDestroy（销毁前）, destroyed（销毁后） Vue的响应式原理当一个Vue实例创建时，vue会遍历data选项的属性，用 Object.">
   
     <link rel="alternate" href="/atom.xml" title="Welcome To my Blog" type="application/atom+xml">
   
@@ -64,9 +68,7 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-    <article id="post-Vue相关" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-Vue相关" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2019/04/09/Vue相关/" class="article-date">
   <time datetime="2019-04-09T03:30:09.000Z" itemprop="datePublished">2019-04-09</time>
@@ -79,8 +81,8 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/04/09/Vue相关/">Vue相关</a>
+    <h1 class="article-title" itemprop="name">
+      Vue相关
     </h1>
   
 
@@ -114,164 +116,19 @@
     </footer>
   </div>
   
-</article>
-
-
+    
+<nav id="article-nav">
   
-    <article id="post-MVC,MVVC,MVVM模式的理解" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/04/09/MVC,MVVC,MVVM模式的理解/" class="article-date">
-  <time datetime="2019-04-09T03:28:41.000Z" itemprop="datePublished">2019-04-09</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/04/09/MVC,MVVC,MVVM模式的理解/">前端知识点</a>
-    </h1>
+    <a href="/2019/04/09/MVC,MVVC,MVVM模式的理解/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">前端知识点</div>
+    </a>
   
+</nav>
 
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="MVC-Model-View-Controller"><a href="#MVC-Model-View-Controller" class="headerlink" title="MVC(Model-View-Controller)"></a>MVC(Model-View-Controller)</h2><p>Model(模型):数据层，负责存储数据。<br>View(视图):展现层，用户所看到的页面<br>Controller(控制器):协调层，负责协调Model和View，根据用户在View上的动作在Model上作出对应的更改，同时将更改的信息返回到View上。<br>三者之间的关系<br>Controller可以直接访问Model，也可以直接控制View,但是Model和View不能相互通信，相当于COntroller就是介于这两者之间的协调者。</p>
-<h2 id="MVVM-Model-View-ViewModel"><a href="#MVVM-Model-View-ViewModel" class="headerlink" title="MVVM(Model-View-ViewModel)"></a>MVVM(Model-View-ViewModel)</h2><p>Model(模型):数据层，负责存储数据。<br>View(控制器):就是ViewController层，他的任务就是从ViewModel层获取数据，然后显示。<br>ViewModel(视图模型):就是View和Model层的粘合剂，封装业务逻辑处理，封装网络处理，封装数据缓存。就是把原来ViewController层的业务逻辑和页面逻辑等剥离出来放到ViewModel层。</p>
-<h2 id="MVVC-Model-View-View-Controller"><a href="#MVVC-Model-View-View-Controller" class="headerlink" title="MVVC(Model-View-View-Controller)"></a>MVVC(Model-View-View-Controller)</h2><p>Model(模型):数据层，负责存储数据。<br>View(视图):展现层，创建需求创建cell<br>View(视图):定义数组，用来接收控制中的数据。处理回调（比如:刷新回调、点击cell回调、加载更多回调、动态视图高度回调等等）</p>
-<p>Controller(控制器):加载网络数据懒加载</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/04/09/MVC,MVVC,MVVM模式的理解/" data-id="cju9978qa0000l47o74nuawqn" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
   
 </article>
-
-
-  
-    <article id="post-建nginx服务" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/04/04/建nginx服务/" class="article-date">
-  <time datetime="2019-04-04T03:58:27.000Z" itemprop="datePublished">2019-04-04</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/04/04/建nginx服务/">搭建nginx服务</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>nginx start<br>open 127.0.0.1<br>nginx stop</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/04/04/建nginx服务/" data-id="cju9978qq0003l47oc44cy10e" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-day" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/04/03/day/" class="article-date">
-  <time datetime="2019-04-03T06:25:01.000Z" itemprop="datePublished">2019-04-03</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/04/03/day/">pic</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><img src="/2019/04/03/day/2B.jpg" alt></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/04/03/day/" data-id="cju9978qq0002l47ohxfobwhe" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-hello，tomorrow" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/04/03/hello，tomorrow/" class="article-date">
-  <time datetime="2019-04-03T01:49:37.000Z" itemprop="datePublished">2019-04-03</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/04/03/hello，tomorrow/">hello，tomorrow</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Hope I will be better</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/04/03/hello，tomorrow/" data-id="cju9978qq0004l47o67xa8xqu" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/明天，有你/">-明天，有你 -</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-
 
 </section>
         
