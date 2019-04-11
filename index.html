@@ -66,6 +66,236 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-tar详解" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/04/11/tar详解/" class="article-date">
+  <time datetime="2019-04-11T08:31:41.000Z" itemprop="datePublished">2019-04-11</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/04/11/tar详解/">tar详解</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Linux下的tar压缩解压缩命令详解<br>–tar</p>
+<p>-c: 建立压缩档案<br>-x：解压<br>-t：查看内容<br>-r：向压缩归档文件末尾追加文件<br>-u：更新原压缩包中的文件</p>
+<p>这五个是独立的命令，压缩解压都要用到其中一个，可以和别的命令连用但只能用其中一个。下面的参数是根据需要在压缩或解压档案时可选的。</p>
+<p>-z：有gzip属性的<br>-j：有bz2属性的<br>-Z：有compress属性的<br>-v：显示所有过程<br>-O：将文件解开到标准输出</p>
+<p>下面的参数-f是必须的</p>
+<p>-f: 使用档案名字，切记，这个参数是最后一个参数，后面只能接档案名。</p>
+<h1 id="tar-cf-all-tar-jpg"><a href="#tar-cf-all-tar-jpg" class="headerlink" title="tar -cf all.tar *.jpg"></a>tar -cf all.tar *.jpg</h1><p>这条命令是将所有.jpg的文件打成一个名为all.tar的包。-c是表示产生新的包，-f指定包的文件名。</p>
+<h1 id="tar-rf-all-tar-gif"><a href="#tar-rf-all-tar-gif" class="headerlink" title="tar -rf all.tar *.gif"></a>tar -rf all.tar *.gif</h1><p>这条命令是将所有.gif的文件增加到all.tar的包里面去。-r是表示增加文件的意思。</p>
+<h1 id="tar-uf-all-tar-logo-gif"><a href="#tar-uf-all-tar-logo-gif" class="headerlink" title="tar -uf all.tar logo.gif"></a>tar -uf all.tar logo.gif</h1><p>这条命令是更新原来tar包all.tar中logo.gif文件，-u是表示更新文件的意思。</p>
+<h1 id="tar-tf-all-tar"><a href="#tar-tf-all-tar" class="headerlink" title="tar -tf all.tar"></a>tar -tf all.tar</h1><p>这条命令是列出all.tar包中所有文件，-t是列出文件的意思</p>
+<h1 id="tar-xf-all-tar"><a href="#tar-xf-all-tar" class="headerlink" title="tar -xf all.tar"></a>tar -xf all.tar</h1><p>这条命令是解出all.tar包中所有文件，-t是解开的意思</p>
+<p>压缩</p>
+<p>tar -cvf jpg.tar *.jpg //将目录里所有jpg文件打包成jpg.tar </p>
+<p>tar -czf jpg.tar.gz *.jpg   //将目录里所有jpg文件打包成jpg.tar后，并且将其用gzip压缩，生成一个gzip压缩过的包，命名为jpg.tar.gz</p>
+<p> tar -cjf jpg.tar.bz2 *.jpg //将目录里所有jpg文件打包成jpg.tar后，并且将其用bzip2压缩，生成一个bzip2压缩过的包，命名为jpg.tar.bz2</p>
+<p>tar -cZf jpg.tar.Z *.jpg   //将目录里所有jpg文件打包成jpg.tar后，并且将其用compress压缩，生成一个umcompress压缩过的包，命名为jpg.tar.Z</p>
+<p>rar a jpg.rar *.jpg //rar格式的压缩，需要先下载rar for linux</p>
+<p>zip jpg.zip *.jpg //zip格式的压缩，需要先下载zip for linux</p>
+<p>解压</p>
+<p>tar -xvf file.tar //解压 tar包</p>
+<p>tar -xzvf file.tar.gz //解压tar.gz</p>
+<p>tar -xjvf file.tar.bz2   //解压 tar.bz2</p>
+<p>tar -xZvf file.tar.Z   //解压tar.Z</p>
+<p>unrar e file.rar //解压rar</p>
+<p>unzip file.zip //解压zip</p>
+<p>总结</p>
+<p>1、*.tar 用 tar -xvf 解压</p>
+<p>2、*.gz 用 gzip -d或者gunzip 解压</p>
+<p>3、<em>.tar.gz和</em>.tgz 用 tar -xzf 解压</p>
+<p>4、*.bz2 用 bzip2 -d或者用bunzip2 解压</p>
+<p>5、*.tar.bz2用tar -xjf 解压</p>
+<p>6、*.Z 用 uncompress 解压</p>
+<p>7、*.tar.Z 用tar -xZf 解压</p>
+<p>8、*.rar 用 unrar e解压</p>
+<p>9、*.zip 用 unzip 解压</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/04/11/tar详解/" data-id="cjucdwzoj0003ek7odvn8hfvg" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-inux-日常命令" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/04/11/inux-日常命令/" class="article-date">
+  <time datetime="2019-04-11T08:12:11.000Z" itemprop="datePublished">2019-04-11</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/04/11/inux-日常命令/">linux 日常命令</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="ls命令"><a href="#ls命令" class="headerlink" title="ls命令"></a>ls命令</h1><h4 id="ls-l"><a href="#ls-l" class="headerlink" title="ls -l"></a>ls -l</h4><p>命令以详情模式(long listing fashion)列出文件夹的内容。</p>
+<h4 id="ls-a"><a href="#ls-a" class="headerlink" title="ls -a"></a>ls -a</h4><p>命令会列出文件夹里的所有内容，包括以”.”开头的隐藏文件。</p>
+<h1 id="uname命令"><a href="#uname命令" class="headerlink" title="uname命令"></a>uname命令</h1><p>Unix Name的简写。显示机器名，操作系统和内核的详细信息。</p>
+<h1 id="history命令"><a href="#history命令" class="headerlink" title="history命令"></a>history命令</h1><p>历史记录。它显示了在终端中所执行过的所有命令的历史。</p>
+<h1 id="sudo命令"><a href="#sudo命令" class="headerlink" title="sudo命令"></a>sudo命令</h1><h1 id="mkdir命令"><a href="#mkdir命令" class="headerlink" title="mkdir命令"></a>mkdir命令</h1><h1 id="touch-命令"><a href="#touch-命令" class="headerlink" title="touch 命令"></a>touch 命令</h1><h1 id="chmod-命令"><a href="#chmod-命令" class="headerlink" title="chmod 命令"></a>chmod 命令</h1><p>只读权限，就设置为’4’;只写权限，设置权限为’2’;只执行权限，设置为1; 读写权限，就是4+2 = 6, 以此类推</p>
+<h4 id="例"><a href="#例" class="headerlink" title="例"></a>例</h4><p>rwxr-x–x   abc.sh<br>这里root的权限是 rwx（读写和执行权限），<br>所属用户组权限是 r-x (只有读和执行权限, 没有写权限)，<br>对于其它用户权限是 -x(只有只执行权限)<br>chmod 777 abc.sh</p>
+<h1 id="chown命令"><a href="#chown命令" class="headerlink" title="chown命令"></a>chown命令</h1><p>改变文件拥有者和所在用户组</p>
+<h1 id="tar命令"><a href="#tar命令" class="headerlink" title="tar命令"></a>tar命令</h1><p>–tar</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/04/11/inux-日常命令/" data-id="cjucdwznm0000ek7oqp567ooc" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-ockerFile" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/04/11/ockerFile/" class="article-date">
+  <time datetime="2019-04-11T07:24:24.000Z" itemprop="datePublished">2019-04-11</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/04/11/ockerFile/">Dockerfile</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>FROM centos:7.2.1511<br>MAINTAINER hxm<br>RUN mkdir -p<br>COPY <em> </em><br>ENTRYPOINT -p *</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/04/11/ockerFile/" data-id="cjucdwznq0001ek7onmdinw5h" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-ocker" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/04/11/ocker/" class="article-date">
+  <time datetime="2019-04-11T07:22:32.000Z" itemprop="datePublished">2019-04-11</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/04/11/ocker/">docker</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>yum install docker<br>1.copy文件<br>    sh docker/<em>/copy.sh 复制文件到目录<br>2.修改配置文件<br>    docker/</em>/<em>/</em>/<em>.ini<br>    192.168.123.1:4150<br>3.创建镜像<br>    docker build -t </em>:1.0 docker/*/<br>4.后台运行<br>    docker run -itd avl:1.0 /bin/bash</p>
+<p>###防火墙<br>iptables -F</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/04/11/ocker/" data-id="cjucdwznr0002ek7outmizuv7" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-console" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/04/10/console/" class="article-date">
+  <time datetime="2019-04-10T03:19:27.000Z" itemprop="datePublished">2019-04-10</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/04/10/console/">console</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h6 id="console-log"><a href="#console-log" class="headerlink" title="console.log()"></a>console.log()</h6><pre><code>console.log(object, otherObject, string)
+console.log(msg, values)
+</code></pre><h6 id="console-warn"><a href="#console-warn" class="headerlink" title="console.warn()"></a>console.warn()</h6><pre><code>打印出的是警告
+</code></pre><h6 id="console-table"><a href="#console-table" class="headerlink" title="console.table()"></a>console.table()</h6><pre><code>将数组数据打印为表格
+</code></pre>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/04/10/console/" data-id="cjucbelyv0000r07olt1zikre" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-Vue相关" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2019/04/09/Vue相关/" class="article-date">
@@ -108,7 +338,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/04/09/Vue相关/" data-id="cjuan3ju00002687ogqoo8fee" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/04/09/Vue相关/" data-id="cjucbelze0004r07obstvqqx9" class="article-share-link">Share</a>
       
       
     </footer>
@@ -148,7 +378,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/04/09/MVC,MVVC,MVVM模式的理解/" data-id="cjuan3jtk0000687o4jgmg8up" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/04/09/MVC,MVVC,MVVM模式的理解/" data-id="cjucbelz10003r07o6gw2iov5" class="article-share-link">Share</a>
       
       
     </footer>
@@ -185,7 +415,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/04/04/建nginx服务/" data-id="cjuan3ju00003687oj94i51qk" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/04/04/建nginx服务/" data-id="cjucbelz00002r07oryse8l0b" class="article-share-link">Share</a>
       
       
     </footer>
@@ -222,7 +452,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/04/03/day/" data-id="cjuan3ju00001687ow4aaxh3h" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/04/03/day/" data-id="cjucbelyy0001r07or73hx7ez" class="article-share-link">Share</a>
       
       
     </footer>
@@ -263,19 +493,23 @@
       <ul>
         
           <li>
-            <a href="/2019/04/09/Vue相关/">Vue相关</a>
+            <a href="/2019/04/11/tar详解/">tar详解</a>
           </li>
         
           <li>
-            <a href="/2019/04/09/MVC,MVVC,MVVM模式的理解/">前端知识点</a>
+            <a href="/2019/04/11/inux-日常命令/">linux 日常命令</a>
           </li>
         
           <li>
-            <a href="/2019/04/04/建nginx服务/">搭建nginx服务</a>
+            <a href="/2019/04/11/ockerFile/">Dockerfile</a>
           </li>
         
           <li>
-            <a href="/2019/04/03/day/">pic</a>
+            <a href="/2019/04/11/ocker/">docker</a>
+          </li>
+        
+          <li>
+            <a href="/2019/04/10/console/">console</a>
           </li>
         
       </ul>
