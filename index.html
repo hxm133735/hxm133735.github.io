@@ -66,6 +66,162 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-cesiumjs-创建" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/09/06/cesiumjs-创建/" class="article-date">
+  <time datetime="2019-09-06T02:03:28.000Z" itemprop="datePublished">2019-09-06</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/09/06/cesiumjs-创建/">cesiumjs 创建</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>创建地球<br>定义容器ID</p>
+<p>function initGis(dom){</p>
+<pre><code>return new Cesium.Viewer(dom, {
+    animation: false,
+    // clockViewModel : new Cesium.ClockViewModel(clock),
+    baseLayerPicker: false,
+    fullscreenButton: false,
+    geocoder: false,
+    homeButton: false,
+    infoBox: false,
+    sceneModePicker: false,
+    selectionIndicator: false,
+    timeline: false,
+    navigationHelpButton: false,
+    navigationInstructionsInitiallyVisible: false,
+    automaticallyTrackDataSourceClocks: false,
+    // sceneMode: Cesium.SceneMode.SCENE2D,
+    imageryProvider: new Cesium.ArcGisMapServerImageryProvider({
+        url: &apos;https://services.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer&apos;
+    }),
+
+
+});
+</code></pre><p>}</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/09/06/cesiumjs-创建/" data-id="ck07hahe20002jc7o91ycmzca" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-cesiumjs" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/09/06/cesiumjs/" class="article-date">
+  <time datetime="2019-09-06T02:01:51.000Z" itemprop="datePublished">2019-09-06</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/09/06/cesiumjs/">cesiumjs添加Marker</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Cesium 基础 添加点位和名称label</p>
+<p>ver entity = viewer.entities.add({</p>
+<pre><code>position: Cesium.Cartesian3.fromDegrees(120.9677706,30.7985748,2.61),
+point: {
+    color: Cesium.Color.RED,    //点位颜色
+    pixelSize: 10                //像素点大小
+},
+label : {
+    text : &apos;测试名称&apos;,
+    font : &apos;14pt Source Han Sans CN&apos;,    //字体样式
+    fillColor:Cesium.Color.BLACK,        //字体颜色
+    backgroundColor:Cesium.Color.AQUA,    //背景颜色
+    showBackground:true,                //是否显示背景颜色
+    style: Cesium.LabelStyle.FILL,        //label样式
+    outlineWidth : 2,                    
+    verticalOrigin : Cesium.VerticalOrigin.CENTER,//垂直位置
+    horizontalOrigin :Cesium.HorizontalOrigin.LEFT,//水平位置
+    pixelOffset:new Cesium.Cartesian2(10,0)            //偏移
+}
+</code></pre><p>});</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/09/06/cesiumjs/" data-id="ck07hahdz0001jc7oxqkipi5p" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-e-Router" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/05/10/e-Router/" class="article-date">
+  <time datetime="2019-05-10T01:56:00.000Z" itemprop="datePublished">2019-05-10</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/05/10/e-Router/">Vue Router</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>const userId = ‘123’<br>router.push({ name: ‘user’, params: { userId }}) // -&gt; /user/123<br>router.push({ path: <code>/user/${userId}</code> }) // -&gt; /user/123<br>// 这里的 params 不生效<br>router.push({ path: ‘/user’, params: { userId }}) // -&gt; /user</p>
+<p>// 在浏览器记录中前进一步，等同于 history.forward()<br>router.go(1)</p>
+<p>// 后退一步记录，等同于 history.back()<br>router.go(-1)</p>
+<p>// 前进 3 步记录<br>router.go(3)</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/05/10/e-Router/" data-id="ck07hahe30004jc7oo1ari4iu" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-tar详解" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2019/04/11/tar详解/" class="article-date">
@@ -127,7 +283,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/04/11/tar详解/" data-id="cjuce0tnf0008do7o1472ml4z" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/04/11/tar详解/" data-id="ck07hahe9000bjc7oxu4m3pnn" class="article-share-link">Share</a>
       
       
     </footer>
@@ -174,7 +330,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/04/11/nux-日常命令/" data-id="cjuce0tnc0004do7o1gq1qwzf" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/04/11/nux-日常命令/" data-id="ck07hahe50006jc7o72jfjzuh" class="article-share-link">Share</a>
       
       
     </footer>
@@ -211,7 +367,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/04/11/ockerFile/" data-id="cjuce0tne0006do7o10m8zs7l" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/04/11/ockerFile/" data-id="ck07hahe70009jc7o1kip21xw" class="article-share-link">Share</a>
       
       
     </footer>
@@ -249,7 +405,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/04/11/ocker/" data-id="cjuce0tnd0005do7ojwlrbqhl" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/04/11/ocker/" data-id="ck07hahe60008jc7oojt8s83c" class="article-share-link">Share</a>
       
       
     </footer>
@@ -289,7 +445,7 @@ console.log(msg, values)
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/04/10/console/" data-id="cjuce0tn00002do7okluha7y3" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/04/10/console/" data-id="ck07hahe40005jc7o5ce4qwjn" class="article-share-link">Share</a>
       
       
     </footer>
@@ -341,7 +497,7 @@ console.log(msg, values)
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/04/09/Vue相关/" data-id="cjuce0tmz0001do7ou259ifkn" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/04/09/Vue相关/" data-id="ck07hahe20003jc7oeo8h2xj2" class="article-share-link">Share</a>
       
       
     </footer>
@@ -381,81 +537,7 @@ console.log(msg, values)
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/04/09/MVC,MVVC,MVVM模式的理解/" data-id="cjuce0tmv0000do7oujmv3u03" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-建nginx服务" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/04/04/建nginx服务/" class="article-date">
-  <time datetime="2019-04-04T03:58:27.000Z" itemprop="datePublished">2019-04-04</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/04/04/建nginx服务/">搭建nginx服务</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>nginx start<br>open 127.0.0.1<br>nginx stop</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/04/04/建nginx服务/" data-id="cjuce0tnf0007do7ogwynnyyf" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-day" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/04/03/day/" class="article-date">
-  <time datetime="2019-04-03T06:25:01.000Z" itemprop="datePublished">2019-04-03</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/04/03/day/">pic</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><img src="/2019/04/03/day/2B.jpg" alt></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/04/03/day/" data-id="cjuce0tnb0003do7oeto9q8zj" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/04/09/MVC,MVVC,MVVM模式的理解/" data-id="ck07hahdv0000jc7ognstsnyo" class="article-share-link">Share</a>
       
       
     </footer>
@@ -466,6 +548,11 @@ console.log(msg, values)
 
   
 
+
+  <nav id="page-nav">
+    
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
+  </nav>
 
 </section>
         
@@ -483,7 +570,7 @@ console.log(msg, values)
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/04/">April 2019</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/09/">September 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/05/">May 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/04/">April 2019</a></li></ul>
     </div>
   </div>
 
@@ -496,23 +583,23 @@ console.log(msg, values)
       <ul>
         
           <li>
+            <a href="/2019/09/06/cesiumjs-创建/">cesiumjs 创建</a>
+          </li>
+        
+          <li>
+            <a href="/2019/09/06/cesiumjs/">cesiumjs添加Marker</a>
+          </li>
+        
+          <li>
+            <a href="/2019/05/10/e-Router/">Vue Router</a>
+          </li>
+        
+          <li>
             <a href="/2019/04/11/tar详解/">tar详解</a>
           </li>
         
           <li>
             <a href="/2019/04/11/nux-日常命令/">linux 日常命令</a>
-          </li>
-        
-          <li>
-            <a href="/2019/04/11/ockerFile/">Dockerfile</a>
-          </li>
-        
-          <li>
-            <a href="/2019/04/11/ocker/">docker</a>
-          </li>
-        
-          <li>
-            <a href="/2019/04/10/console/">console</a>
           </li>
         
       </ul>
