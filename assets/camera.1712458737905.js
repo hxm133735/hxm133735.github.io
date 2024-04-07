@@ -1,0 +1,1 @@
+const i=()=>({destination:{x:window.viewer.camera.position.x,y:window.viewer.camera.position.y,z:window.viewer.camera.position.z},orientation:{heading:window.viewer.camera.heading,pitch:window.viewer.camera.pitch,roll:window.viewer.camera.roll}}),a=e=>{window.viewer.camera.flyTo(e)};export{i as a,a as g};
